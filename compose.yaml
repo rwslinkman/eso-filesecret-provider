@@ -1,0 +1,9 @@
+services:
+  eso-fsp:
+    build: .
+    environment:
+      SECRETS_DIR: /data/secrets
+    volumes:
+      - ./secrets:/data/secrets
+    ports:
+      - "8080:8080"
